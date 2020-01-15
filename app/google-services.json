@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "533989386759",
+    "firebase_url": "https://asvisa-2db21.firebaseio.com",
+    "project_id": "asvisa-2db21",
+    "storage_bucket": "asvisa-2db21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533989386759:android:2eee6bf64925ed030218a2",
+        "android_client_info": {
+          "package_name": "com.mind.asvisa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533989386759-ilf55iaaj8bht37c917k0ilmd6gi792i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mind.asvisa",
+            "certificate_hash": "10211e054bbc91beecd7b43023d307a5d9b318f0"
+          }
+        },
+        {
+          "client_id": "533989386759-3d2cbqaieasmpa9d4oqh17jojv1vdqvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsal8WK2Ki78jZiYBEunmgMtqodCugCYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533989386759-3d2cbqaieasmpa9d4oqh17jojv1vdqvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Anasayfa"
+            android:icon="@drawable/empire"/>
+        <item
+            android:id="@+id/nav_randevu"
+            android:title="Randevu Al"
+            android:icon="@drawable/empire"/>
+        <item
+            android:id="@+id/nav_basvuru"
+            android:title="Başvuru Sorgula"
+            android:icon="@drawable/empire"/>
+        <item
+            android:id="@+id/nav_genel"
+            android:title="Genel Bilgiler"
+            android:icon="@drawable/empire"/>
+        <item
+            android:id="@+id/nav_onemli"
+            android:title="Önemli Duyurular"
+            android:icon="@drawable/empire"/>
+    </group>
+
+    <group>
+
+        <item
+            android:title="Size Özel">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_ozel"
+                    android:title="Özel Hizmetlerimiz"
+                    android:icon="@drawable/empire"/>
+                <item
+                    android:id="@+id/nav_seyahat"
+                    android:title="Seyahat Sigortası"
+                    android:icon="@drawable/empire"/>
+                <item
+                    android:id="@+id/nav_online"
+                    android:title="Online İletişim"
+                    android:icon="@drawable/empire" />
+            </menu>
+
+            ></item>
+
+
+
+    </group>
+
+
+
+    <group>
+            <item
+                android:title="Profil">
+
+                <menu>
+
+
+                    <item
+                        android:id="@+id/nav_login"
+                        android:title="Giriş Yap"
+                        android:icon="@drawable/empire" />
+                    <item
+                        android:id="@+id/nav_profil"
+                        android:title="Profil"
+                        android:icon="@drawable/empire" />
+                    <item
+                        android:id="@+id/nav_cikis"
+                        android:title="Çıkış Yap"
+                        android:icon="@drawable/empire" />
+
+                </menu>
+
+
+
+
+            </item>
+
+
+
+    </group>
+
+</menu>
