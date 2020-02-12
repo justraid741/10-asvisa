@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageButton norway= findViewById(R.id.norway);
         ImageButton slovak= findViewById(R.id.slovak);
         drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
         textView =findViewById(R.id.textView);
         toolbar = findViewById(R.id.toolbar);
 
@@ -71,22 +70,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             norway.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int2=new Intent(MainActivity.this,Norway.class);
-                startActivity(int2);
+                Intent int3=new Intent(MainActivity.this,Norway.class);
+                startActivity(int3);
             }
         });
         portugal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int3=new Intent(MainActivity.this,Portugal.class);
-                startActivity(int3);
+                Intent int4=new Intent(MainActivity.this,Portugal.class);
+                startActivity(int4);
             }
         });
         slovak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int4=new Intent(MainActivity.this,Slovak.class);
-                startActivity(int4);
+                Intent int5=new Intent(MainActivity.this,Slovak.class);
+                startActivity(int5);
             }
         });
 

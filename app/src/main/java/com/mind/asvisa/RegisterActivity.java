@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
         if (fAuth.getCurrentUser()!= null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), WebView.class));
             finish();
         }
 
@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             Toast.makeText(RegisterActivity.this, "Kayıt Basarili", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), WebView.class));
                         } else {
                             Toast.makeText(RegisterActivity.this, "Hata!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 

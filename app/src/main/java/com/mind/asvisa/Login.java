@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Giris Basarili", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), WebView.class));
                         } else {
 
                             Toast.makeText(Login.this, "Hata!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
