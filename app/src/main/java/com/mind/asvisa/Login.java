@@ -28,7 +28,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     FirebaseAuth fAuth;
     EditText mMal,mSif;
     Button mBt_Login;
-    TextView mTv_forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +62,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Giris Basarili", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), WebView.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
 
                             Toast.makeText(Login.this, "Hata!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

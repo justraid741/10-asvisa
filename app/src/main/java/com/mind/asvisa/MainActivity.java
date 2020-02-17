@@ -5,23 +5,24 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.google.android.material.navigation.NavigationView;
+import com.mind.asvisa.Fragments.RandevuFragment;
 
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 
-
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -30,17 +31,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView textView;
     ImageButton macar,portugal,norway,slovak;
 
+    RandevuFragment randevuFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton macar=findViewById(R.id.macar);
-        ImageButton portugal= findViewById(R.id.portugal);
-        ImageButton norway= findViewById(R.id.norway);
-        ImageButton slovak= findViewById(R.id.slovak);
+        macar=findViewById(R.id.macar);
+        portugal= findViewById(R.id.portugal);
+        norway= findViewById(R.id.norway);
+        slovak= findViewById(R.id.slovak);
         drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
         textView =findViewById(R.id.textView);
         toolbar = findViewById(R.id.toolbar);
 
@@ -50,7 +54,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(this);
+        randevuFragment = new RandevuFragment();
+        setFragment(randevuFragment);
+
 
 
         macar.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +95,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
     }
+
+    private void setFragment(Fragment fragment){
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container,fragment);
+        fragmentTransaction.commit();
+    }
+
+
+
 
     public void onBackPressed () {
 
@@ -102,10 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return true;
-    }
+
 }
 
 

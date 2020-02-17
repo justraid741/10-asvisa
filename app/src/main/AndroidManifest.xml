@@ -14,11 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".WebView"/>
         <activity android:name=".Slovak" />
         <activity android:name=".Norway" />
         <activity android:name=".Portugal" />
         <activity android:name=".Hungary" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".Login" />
         <activity
             android:name=".MainActivity"
@@ -30,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
